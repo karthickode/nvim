@@ -12,4 +12,4 @@ vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower win
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 -- File Navigation
-vim.keymap.set('n', '<leader>bb', vim.cmd.Ex)
+vim.keymap.set('n', '<leader>nb', vim.cmd.Ex)
