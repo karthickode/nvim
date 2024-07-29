@@ -1,11 +1,12 @@
 return {
     "nvim-treesitter/nvim-treesitter",
+    Event= "Lazy",
     build = ":TSUpdate",
     config = function()
         require("nvim-treesitter.configs").setup({
             ensure_installed = {
                 "vimdoc", "javascript", "typescript", "go", "lua", "css",
-                "jsdoc", "bash", "markdown", "dockerfile", "html", "java", 
+                "jsdoc", "bash", "markdown", "dockerfile", "html", "java",
                 "json", "json5", "python", "powershell", "toml", "xml"
             },
 
