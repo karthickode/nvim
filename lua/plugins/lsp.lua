@@ -1,5 +1,6 @@
 return {
     "neovim/nvim-lspconfig",
+    lazy = true,
     dependencies = {
         "williamboman/mason.nvim",
         "williamboman/mason-lspconfig.nvim",
@@ -36,7 +37,6 @@ return {
             },
             handlers = {
                 function(server_name) -- default handler (optional)
-
                     require("lspconfig")[server_name].setup {
                         capabilities = capabilities
                     }
@@ -71,6 +71,7 @@ return {
                 ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
                 ['<C-y>'] = cmp.mapping.confirm({ select = true }),
                 ["<C-Space>"] = cmp.mapping.complete(),
+                ["<C-x>"] = cmp.mapping.close(),
             }),
             sources = cmp.config.sources({
                 { name = 'nvim_lsp' },
